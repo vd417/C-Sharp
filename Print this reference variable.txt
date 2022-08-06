@@ -1,0 +1,14 @@
+using System;
+class Test
+{
+    void Display()
+    {
+        Console.WriteLine("Display : " + this);
+    }
+    static void Main()
+    {
+        Test test = new Test();
+        Console.WriteLine("Main : " + test);
+        test.Display();
+    }
+}

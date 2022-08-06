@@ -1,0 +1,20 @@
+using System;
+
+class Test {
+    void Show() {
+        Console.WriteLine("Hello");    
+    }
+    void Show1() {
+        // "this" is a reference variable which hold the current class identity.  
+        // When compiler called non-static to non-static method or variable by default use "this" keyword. 
+
+        this.Show(); // calling method Show()
+        Console.WriteLine("Hi...");
+    }
+    static void Main()
+    {
+        // object creation. 
+        Test t = new Test();
+        t.Show1();// calling method Show1()
+    }
+}

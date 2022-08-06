@@ -1,0 +1,29 @@
+class smallestNumber 
+{
+    static int smallest(int size )
+    {
+        int []arr = new int[size];
+        
+         for(int i=0; i<arr.Length; i++)
+        {
+            System.Console.Write("Enter the values : ");
+            arr[i] = int.Parse(System.Console.ReadLine());
+        }
+        int smallest = arr[0];
+        for(int  i= 0 ; i<arr.Length; i++)
+        {
+            if(arr[i]<smallest)
+                smallest  = arr[i];
+        }
+       
+    return smallest; 
+        
+    }
+    static void Main()
+    {
+        System.Console.Write("Enter the size of an array : ");
+        int size  = int.Parse(System.Console.ReadLine());
+        
+       System.Console.WriteLine("The higest number is  : " +(smallest(size)));
+    }
+}

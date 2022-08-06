@@ -1,0 +1,27 @@
+using System;
+class Employee
+{
+    private int empNo;
+
+    public int EmpNo
+    {
+        set
+        {
+            empNo = value;
+        }
+        get
+        {
+            return empNo;
+        }
+    }
+}
+
+class EmployeeDetails
+{
+    static void Main()
+    {
+        Employee employee = new Employee();
+        employee.EmpNo = 101;
+        Console.WriteLine("Employee Number is : " + employee.EmpNo);
+    }
+}
