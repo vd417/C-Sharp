@@ -1,0 +1,25 @@
+using System;
+ class Employee
+{
+    private int empNo;
+    public int EmpNo
+    {
+        set
+        {
+            empNo = value;
+        }
+           get
+        {
+            return empNo;
+        }
+    }
+}
+  class Bank
+{
+    static void Main()
+    {
+        Employee employee = new Employee();
+        employee.EmpNo = 102;
+        Console.WriteLine(employee.EmpNo);
+    }
+}
