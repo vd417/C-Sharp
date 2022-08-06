@@ -1,0 +1,47 @@
+class  Prime
+{
+    static void Main()
+    {
+        System.Console.Write("Enter the size of Base Array : ");
+        int b = int.Parse(System.Console.ReadLine());
+        
+        System.Console.Write("Enter the size of Sub Array : ");
+        int s = int.Parse(System.Console.ReadLine());
+        
+        int [,]arr = new int[b,s];
+        
+        for(int i=0; i<arr.GetLength(0); i++)
+        {
+            for(int j=0; j<arr.GetLength(0); j++)
+            {
+                System.Console.Write("Enter the elements [{0} , {1}] : ",i,j);
+                arr[i,j] = int.Parse(System.Console.ReadLine());
+                
+            }
+           System.Console.WriteLine( ); 
+        }
+        
+System.Console.WriteLine("-------------Array in Matrix Form-----------------");
+        for(int i=0 ; i<arr.GetLength(0); i++)
+        {
+            for(int j = 0; j<arr.GetLength(1); j++)
+            {
+                System.Console.Write(arr[i,j]+ " ");   
+            }
+            System.Console.WriteLine();
+        }
+System.Console.WriteLine("---------------CHECK MAX. & MIN VALUES IN EACH ROW--------------------");
+        
+        for(int i=0 ; i<arr.GetLength(0); i++)
+        {
+            int sum = 0;
+          for(int j = 0; j<arr.GetLength(1); j++)
+            {
+                if(i==j)
+                    sum = sum + arr[i,j];
+            }
+            System.Console.WriteLine(sum);
+        }
+        
+    }
+}

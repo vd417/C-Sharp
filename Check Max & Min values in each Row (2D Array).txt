@@ -1,0 +1,57 @@
+class  Prime
+{
+    static void Main()
+    {
+        System.Console.Write("Enter the size of Base Array : ");
+        int b = int.Parse(System.Console.ReadLine());
+        
+        System.Console.Write("Enter the size of Sub Array : ");
+        int s = int.Parse(System.Console.ReadLine());
+        
+        int [,]arr = new int[b,s];
+        
+        for(int i=0; i<arr.GetLength(0); i++)
+        {
+            for(int j=0; j<arr.GetLength(0); j++)
+            {
+                System.Console.Write("Enter the elements [{0} , {1}] : ",i,j);
+                arr[i,j] = int.Parse(System.Console.ReadLine());
+                
+            }
+           System.Console.WriteLine( ); 
+        }
+        
+System.Console.WriteLine("-------------Array in Matrix Form-----------------");
+        for(int i=0 ; i<arr.GetLength(0); i++)
+        {
+            for(int j = 0; j<arr.GetLength(1); j++)
+            {
+                System.Console.Write(arr[i,j]+ " ");   
+            }
+            System.Console.WriteLine();
+        }
+System.Console.WriteLine("---------------CHECK MAX. & MIN VALUES IN EACH ROW--------------------");
+        
+        for(int i=0 ; i<arr.GetLength(0); i++)
+        {
+          int min = arr[0,0];
+          int max = arr[0,0];
+          for(int j = 0; j<arr.GetLength(1); j++)
+            {
+                if(arr[i,j] > max)
+                {
+                    max = arr[i,j];
+                }
+                if (arr[i,j] < min)
+                {
+                    min = arr[i,j];
+                }
+            }
+            System.Console.WriteLine("In Row {0} ", i);
+            System.Console.WriteLine("Maximum element:"+max);
+            System.Console.WriteLine("Minimum  element:" + min);
+            System.Console.WriteLine();
+        }
+        
+    }
+}
