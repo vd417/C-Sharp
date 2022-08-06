@@ -22,7 +22,7 @@ class demo{
         
         int total = hindi + english + math;
         
-        float percentage = (total%300)*100;
+        float percentage = (total%3)F;
         
         if(percentage>=60)
             System.Console.WriteLine("1st Division");
