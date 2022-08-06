@@ -24,18 +24,18 @@ class demo{
         
         float percentage = (total%3)F;
         
-        if(percentage>=60)
+        if(percentage<33)
+            System.Console.WriteLine("FAIL");
+            
+            
+        else if(percentage<45)
+            System.Console.WriteLine("3rd Division");
+            
+        else if(percentage<60)
+            System.Console.WriteLine("2nd Division");
+            
+        else if(percentage>=60&&percentage<=100)
             System.Console.WriteLine("1st Division");
-            
-            
-        else if(percentage<=60 && percentage>=50)
-            System.Console.WriteLine("2st Division");
-            
-        else if(percentage<=50 && percentage>=40)
-            System.Console.WriteLine("3st Division");
-            
-        else if(percentage<=40)
-            System.Console.WriteLine("Fail");
             
     }
     
