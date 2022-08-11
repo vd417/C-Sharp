@@ -1,0 +1,29 @@
+class Demo
+{
+    static string prime(int num)
+    {
+        string result;
+        bool flag = true;
+        int i = 2;
+        while (i < num / 2)
+        {
+            if (num % i == 0)
+            {
+                flag = false;
+                break;
+            }
+            i++;
+        }
+        if (flag == true)
+            result = "prime";
+        else
+            result = "not prime";
+        return result;
+    }    
+       static void Main()
+    {
+        System.Console.WriteLine("enter the number  :");
+        int num = System.Convert.ToInt32(System.Console.ReadLine());
+         System.Console.WriteLine(prime(num));
+    }
+}
