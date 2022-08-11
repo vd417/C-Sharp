@@ -1,0 +1,37 @@
+class Demo
+{
+    static void M1(int n1, int n2, char choice)
+    {
+        if (choice == '+')
+
+            System.Console.WriteLine(n1 + n2);
+        else if (choice == '-')
+
+            System.Console.WriteLine(n1 - n2);
+        else if (choice == '*')
+
+            System.Console.WriteLine(n1 * n2);
+        else if (choice == '/')
+            
+
+            System.Console.WriteLine(n1 / n2);
+            else
+                System.Console.WriteLine("invalid input");
+         
+
+        
+
+    }
+    static void Main()
+    {
+        System.Console.WriteLine("enter the first number:");
+        int n1 = System.Convert.ToInt32(System.Console.ReadLine());
+
+        System.Console.WriteLine("enter the first number:");
+        int n2 = System.Convert.ToInt32(System.Console.ReadLine());
+
+        System.Console.WriteLine("enter the Charactor:");
+        char choice = System.Convert.ToChar(System.Console.ReadLine());
+        M1(n1, n2, choice);
+    }
+}
